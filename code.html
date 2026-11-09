@@ -1,0 +1,323 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Birthday Celebration — Invitation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            butter: '#F3E4B9',
+            'butter-light': '#FAF5E8',
+            ivory: '#F2EEE5',
+            'ivory-pure': '#FAF8F5',
+            blush: '#E2C9CA',
+            'blush-rose': '#D1A8AA',
+            'rose-accent': '#C08B8E',
+            'dark-brown': '#3A2E2B',
+            'warm-muted': '#72615E'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            cormorant: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-7px) rotate(1deg); }
+    }
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.85); }
+      50% { opacity: 0.9; transform: scale(1.15); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.05); }
+    }
+    .animate-float-slow {
+      animation: gentleFloat 5s ease-in-out infinite;
+    }
+    .animate-sparkle {
+      animation: sparkle 3s ease-in-out infinite;
+    }
+    .animate-glow {
+      animation: pulseGlow 4s ease-in-out infinite;
+    }
+    .multiply-transparent {
+      mix-blend-mode: multiply;
+    }
+
+    /* Timeline Scroll-Interactive Transition Styles */
+    .timeline-item {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .timeline-node {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .timeline-details {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .timeline-badge {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Active Highlight States */
+    .timeline-item.active .timeline-node {
+      transform: scale(1.38);
+      background-color: #C08B8E;
+      border-color: #FAF5E8;
+      box-shadow: 0 0 0 4px rgba(209, 168, 170, 0.45), 0 4px 12px rgba(192, 139, 142, 0.35);
+    }
+    .timeline-item.active .timeline-node-inner {
+      background-color: #FAF8F5;
+      transform: scale(1.15);
+    }
+    .timeline-item.active .timeline-details {
+      transform: scale(1.03) translateX(-2px);
+      opacity: 1;
+    }
+    .timeline-item.active .timeline-details h4 {
+      color: #241A17;
+    }
+    .timeline-item.active .timeline-details p {
+      color: #554441;
+    }
+    .timeline-item.active .timeline-badge {
+      transform: scale(1.04) translateX(2px);
+      background-color: #FAF5E8;
+      border-color: #D1A8AA;
+      color: #C08B8E;
+      box-shadow: 0 2px 8px rgba(192, 139, 142, 0.18);
+    }
+  </style>
+</head>
+<body class="bg-[#ECE6DE] text-dark-brown font-sans antialiased selection:bg-blush selection:text-dark-brown min-h-screen py-0 sm:py-8 flex justify-center items-start">
+<!-- ============================================================ -->
+<!-- MOBILE VIEW CONTAINER (Enforced Mobile Format across all devices) -->
+<!-- ============================================================ -->
+<main class="w-full max-w-[430px] min-h-screen bg-[#FBF8F3] shadow-2xl relative overflow-x-hidden border-x border-butter/30 px-4 py-7 flex flex-col justify-between">
+<!-- Decorative background sparkles -->
+<div class="absolute inset-0 pointer-events-none z-10 overflow-hidden">
+<div class="absolute top-[10%] left-[6%] text-blush-rose animate-sparkle" style="animation-delay: 0.2s;">
+<svg class="w-4 h-4 fill-current opacity-60" viewBox="0 0 24 24"><path d="M12 0l2.5 8.5L23 11l-8.5 2.5L12 22l-2.5-8.5L1 11l8.5-2.5z"></path></svg>
+</div>
+<div class="absolute top-[32%] right-[7%] text-butter animate-sparkle" style="animation-delay: 1.2s;">
+<svg class="w-5 h-5 fill-current opacity-70" viewBox="0 0 24 24"><path d="M12 0l2.5 8.5L23 11l-8.5 2.5L12 22l-2.5-8.5L1 11l8.5-2.5z"></path></svg>
+</div>
+<div class="absolute top-[65%] left-[8%] text-blush animate-sparkle" style="animation-delay: 2.1s;">
+<svg class="w-4 h-4 fill-current opacity-60" viewBox="0 0 24 24"><path d="M12 0l2.5 8.5L23 11l-8.5 2.5L12 22l-2.5-8.5L1 11l8.5-2.5z"></path></svg>
+</div>
+</div>
+<!-- Inner content stack -->
+<div class="relative z-20 flex flex-col gap-9">
+<!-- ============================================================ -->
+<!-- SECTION 1: HERO SECTION                                      -->
+<!-- ============================================================ -->
+<section class="relative" id="gallery"><div class="rounded-3xl p-3.5 bg-gradient-to-b from-butter-light/80 via-white/80 to-ivory-pure/90 border border-butter/60 shadow-sm"><div class="flex flex-col gap-3"><div class="group relative rounded-2xl overflow-hidden bg-ivory border-2 border-white shadow-sm cursor-pointer" data-lightbox-desc="Conservatory gardens, radiant joy" data-lightbox-index="0" data-lightbox-src="https://lh3.googleusercontent.com/aida/AEtjO1V5RqUbN0faqpvxqPxZFfQaQsE9OYuI9CEmj9H4w0OUo-FQNxJRU_gDmVCKhugXs6-jluPf2xrd_DYsmJeYIP5GH-4QyLAKLRy9_z2wbhMns8PYQReJQZIYWNrvuU98i7wl1PBj9MZtIIaxm3RFxF9xSQHxXM9Fbbv7SpaGZwUTquu8NX8alBDWzsby2rhNn7nxBt5qbAbN1boEnrAe6BnodkKLnIRltPzB9kZ-ABgO-3tcZvLo94T0I-CO" data-lightbox-title="Her Beautiful Smile"><div class="aspect-[4/3] w-full relative overflow-hidden bg-ivory"><img alt="Elena smiling joyfully" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1V5RqUbN0faqpvxqPxZFfQaQsE9OYuI9CEmj9H4w0OUo-FQNxJRU_gDmVCKhugXs6-jluPf2xrd_DYsmJeYIP5GH-4QyLAKLRy9_z2wbhMns8PYQReJQZIYWNrvuU98i7wl1PBj9MZtIIaxm3RFxF9xSQHxXM9Fbbv7SpaGZwUTquu8NX8alBDWzsby2rhNn7nxBt5qbAbN1boEnrAe6BnodkKLnIRltPzB9kZ-ABgO-3tcZvLo94T0I-CO"><div class="absolute bottom-2.5 left-2.5 px-3 py-1 rounded-xl bg-white/90 backdrop-blur-sm border border-butter/60 text-[11px] font-medium text-dark-brown shadow-sm flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-rose-accent"></span>Her Beautiful Smile</div></div></div><div class="grid grid-cols-2 gap-2.5"><div class="group relative rounded-2xl overflow-hidden bg-white border-2 border-white shadow-sm cursor-pointer" data-lightbox-desc="Vintage tea cup &amp; sweet conversations" data-lightbox-index="1" data-lightbox-src="https://lh3.googleusercontent.com/aida/AEtjO1XTjmulUODTu_khB6BYOuTt1lyYVDoITaghs8LujzRHB6sWaAN8gq_KH-lSzX6hMpP4WBAor5vQZnMstDxly3E3SJw3HrSmexz5zkhGhG3NymqINarKoLzQO8F6PDWXZ1iS38kzYkMAIsYl5syrKEy1z45OINukWjz1_Ry4k9LJU1EvaXQjKVeMaxJZV54sUElQFijIhgJv-p-XMY-gQNPvZzzdI_G0-yipvPo-4VaxGgBRVnIl9YpfQlQl" data-lightbox-title="Little Moments"><div class="aspect-[4/3] w-full relative overflow-hidden bg-white"><img alt="Elena candid moment" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XTjmulUODTu_khB6BYOuTt1lyYVDoITaghs8LujzRHB6sWaAN8gq_KH-lSzX6hMpP4WBAor5vQZnMstDxly3E3SJw3HrSmexz5zkhGhG3NymqINarKoLzQO8F6PDWXZ1iS38kzYkMAIsYl5syrKEy1z45OINukWjz1_Ry4k9LJU1EvaXQjKVeMaxJZV54sUElQFijIhgJv-p-XMY-gQNPvZzzdI_G0-yipvPo-4VaxGgBRVnIl9YpfQlQl"><div class="absolute bottom-2 left-2 px-2 py-0.5 rounded-lg bg-white/90 backdrop-blur-sm border border-butter/60 shadow-sm"><span class="text-[10px] text-dark-brown font-medium italic font-cormorant">"Little Moments"</span></div></div></div><div class="group relative rounded-2xl overflow-hidden bg-white border-2 border-white shadow-sm cursor-pointer" data-lightbox-desc="Twirling amongst conservatory blooms" data-lightbox-index="2" data-lightbox-src="https://lh3.googleusercontent.com/aida/AEtjO1WrkRTnAijWJA1_Cu4ktIsgzSa1QfEmUlBHqocVfnZoKD95vdFK-D7GHlnM-N-KIuHjp4IEHLFTrOvwfQghKB1ysWULhouhZyRKj6eUSGrbM6Ju_LjryXnPwQ7mM6IaJ5AUlDNJb3sc0-YBiwTTQ5jdJAEPDldioxK1Cu96uljuXGfPJvubkbUwjHGtBIttrV1g5hDTmVgOhpWUhWJzr253Wj8phECNyinVx09PSXyQByvrmQFwN2z4BczK" data-lightbox-title="Simply Her"><div class="aspect-[4/3] w-full relative overflow-hidden bg-white"><img alt="Elena celebrating" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WrkRTnAijWJA1_Cu4ktIsgzSa1QfEmUlBHqocVfnZoKD95vdFK-D7GHlnM-N-KIuHjp4IEHLFTrOvwfQghKB1ysWULhouhZyRKj6eUSGrbM6Ju_LjryXnPwQ7mM6IaJ5AUlDNJb3sc0-YBiwTTQ5jdJAEPDldioxK1Cu96uljuXGfPJvubkbUwjHGtBIttrV1g5hDTmVgOhpWUhWJzr253Wj8phECNyinVx09PSXyQByvrmQFwN2z4BczK"><div class="absolute bottom-2 left-2 px-2 py-0.5 rounded-lg bg-white/90 backdrop-blur-sm border border-blush/60 shadow-sm"><span class="text-[10px] text-dark-brown font-medium italic font-cormorant">"Simply Her"</span></div></div></div></div></div></div></section><section class="pt-3 pb-2 flex flex-col items-center relative text-center" id="hero">
+<!-- Ambient subtle glow behind hero -->
+<div class="absolute w-64 h-64 rounded-full bg-gradient-to-tr from-butter/40 via-blush/30 to-transparent blur-2xl pointer-events-none -z-10 animate-glow"></div>
+<h1 class="font-serif text-5xl font-bold text-dark-brown leading-tight tracking-tight mb-1">
+<span class="block italic text-rose-accent">Happy</span>
+<span class="block">Birthday</span>
+</h1>
+<div class="font-cormorant italic text-4xl text-rose-accent font-semibold mb-2">
+          Elena
+        </div>
+<p class="text-xs text-warm-muted font-light leading-relaxed max-w-[280px] mx-auto mb-4">
+          A beautiful milestone celebration filled with radiant smiles, joy, laughter, and sweet moments.
+        </p>
+<!-- Celebratory Chips -->
+<div class="flex items-center justify-center gap-2 mb-6">
+<span class="px-3 py-1 rounded-full bg-white/90 border border-butter shadow-sm text-xs font-medium">🥂 Cheers to 20</span>
+<span class="px-3 py-1 rounded-full bg-white/90 border border-blush shadow-sm text-xs font-medium">🌸 Radiant &amp; Joyful</span>
+</div>
+<!-- Elena's Portrait Card & Floating Panda (with background removed) -->
+<div class="relative max-w-[270px] w-full mx-auto">
+<!-- Card frame -->
+<div class="relative rounded-3xl overflow-hidden bg-white p-2.5 border-4 border-butter shadow-xl">
+<div class="aspect-[3/4] w-full rounded-2xl overflow-hidden relative bg-ivory">
+<img alt="Elena 20th celebration" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WrkRTnAijWJA1_Cu4ktIsgzSa1QfEmUlBHqocVfnZoKD95vdFK-D7GHlnM-N-KIuHjp4IEHLFTrOvwfQghKB1ysWULhouhZyRKj6eUSGrbM6Ju_LjryXnPwQ7mM6IaJ5AUlDNJb3sc0-YBiwTTQ5jdJAEPDldioxK1Cu96uljuXGfPJvubkbUwjHGtBIttrV1g5hDTmVgOhpWUhWJzr253Wj8phECNyinVx09PSXyQByvrmQFwN2z4BczK">
+<div class="absolute bottom-2.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-butter/80 shadow-sm text-[11px] font-serif font-medium text-dark-brown whitespace-nowrap">
+                Elena · 20th Celebration
+              </div>
+</div>
+</div>
+<!-- Floating Panda Accent with Transparent Multiply Background -->
+<div class="absolute -top-11 -right-8 w-28 h-28 z-20 pointer-events-none animate-float-slow">
+<img alt="Joyful Panda floating with balloon" class="w-full h-full object-contain multiply-transparent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHkQmxadZUj16LmxE7yDLB4egX8vc0RvgXwPfZ9hcZmICz7wXSMUb4YVXAyugI2i3P1D5VnTl0QazVMowd1Da2_2CkUuTGgG-sITATLQ60GphNDH34UUS3pVjf8GEjuV9uUNHyaANXFpgqRUvgCZZZT79icO2ObHbdt4JFoRMuq96oH2GDc7WlODSRxgSt-J3-qhFM_Ehsh_evVB3mv1pCZb_wk3Hc_R75oZebgZVEEkikPIPbmrxINZFeQJ3SCkl1dPg">
+</div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- SECTION 2: PHOTO GALLERY                                     -->
+<!-- ============================================================ -->
+
+<!-- ============================================================ -->
+<!-- SECTION 3: COUNTDOWN & SCHEDULE                               -->
+<!-- ============================================================ -->
+<section class="relative" id="details">
+<!-- COUNTDOWN CARD -->
+<div class="text-center mb-6">
+<span class="text-[10px] font-medium uppercase tracking-widest text-warm-muted block mb-3">COUNTDOWN TO CELEBRATION</span>
+<div class="grid grid-cols-4 gap-2" id="countdown-grid"><div class="flex flex-col items-center py-1"><span class="font-serif text-2xl font-semibold text-dark-brown" id="days-val">29</span><span class="text-[9px] tracking-wider uppercase font-medium text-warm-muted mt-0.5">Days</span></div><div class="flex flex-col items-center py-1"><span class="font-serif text-2xl font-semibold text-dark-brown" id="hours-val">03</span><span class="text-[9px] tracking-wider uppercase font-medium text-warm-muted mt-0.5">Hours</span></div><div class="flex flex-col items-center py-1"><span class="font-serif text-2xl font-semibold text-dark-brown" id="mins-val">56</span><span class="text-[9px] tracking-wider uppercase font-medium text-warm-muted mt-0.5">Mins</span></div><div class="flex flex-col items-center py-1"><span class="font-serif text-2xl font-semibold text-rose-accent" id="secs-val">34</span><span class="text-[9px] tracking-wider uppercase font-medium text-warm-muted mt-0.5">Secs</span></div></div>
+
+</div>
+<!-- PROGRAM TIMELINE (Centered 3-Column Layout with Continuous Center Line & Scroll Active States) -->
+<div>
+<div class="text-center mb-5">
+<span class="text-xs font-semibold tracking-widest uppercase text-rose-accent block">PROGRAM</span>
+</div>
+<!-- Centered Timeline Wrapper with Continuous Center Line -->
+<div class="relative py-2" id="timeline-container"><div class="relative py-4 max-w-[340px] mx-auto"><div class="absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-[1px] bg-[#C5A376]/50 pointer-events-none"></div><div class="flex flex-col gap-8"><div class="relative grid grid-cols-[1fr_40px_1fr] items-center"><div class="text-right pr-2"><span class="font-serif text-2xl text-dark-brown font-normal">16:00</span></div><div class="flex justify-center z-10"><svg class="w-3.5 h-3.5 text-[#C5A376] fill-current" viewBox="0 0 24 24"><polygon points="12,2 15,9 22,12 15,15 12,22 9,15 2,12 9,9"></polygon></svg></div><div class="text-left pl-2"><h4 class="font-serif text-base text-dark-brown leading-snug font-normal">Welcome<br><span class="font-serif text-sm text-warm-muted">Reception</span></h4></div></div><div class="relative grid grid-cols-[1fr_40px_1fr] items-center"><div class="text-right pr-2"><span class="font-serif text-2xl text-dark-brown font-normal">17:00</span></div><div class="flex justify-center z-10"><div class="w-9 h-9 rounded-full bg-[#FBF8F3] flex items-center justify-center p-0.5 shadow-sm"><svg class="w-8 h-8 text-[#C5A376] stroke-current fill-none" stroke-width="1" viewBox="0 0 100 100"><circle cx="50" cy="50" r="8" fill="#FAF5E8" stroke="#C5A376" stroke-width="1.5"></circle><circle cx="50" cy="28" r="12" fill="#FAF8F5" stroke="#C5A376" opacity="0.9"></circle><circle cx="50" cy="72" r="12" fill="#FAF8F5" stroke="#C5A376" opacity="0.9"></circle><circle cx="28" cy="50" r="12" fill="#FAF8F5" stroke="#C5A376" opacity="0.9"></circle><circle cx="72" cy="50" r="12" fill="#FAF8F5" stroke="#C5A376" opacity="0.9"></circle><circle cx="35" cy="35" r="11" fill="#FAF8F5" stroke="#C5A376" opacity="0.8"></circle><circle cx="65" cy="35" r="11" fill="#FAF8F5" stroke="#C5A376" opacity="0.8"></circle><circle cx="35" cy="65" r="11" fill="#FAF8F5" stroke="#C5A376" opacity="0.8"></circle><circle cx="65" cy="65" r="11" fill="#FAF8F5" stroke="#C5A376" opacity="0.8"></circle><circle cx="50" cy="50" r="4" fill="#C5A376"></circle></svg></div></div><div class="text-left pl-2"><h4 class="font-serif text-base text-dark-brown leading-snug font-normal">Celebration<br><span class="font-serif text-sm text-warm-muted">Ceremony</span></h4></div></div><div class="relative grid grid-cols-[1fr_40px_1fr] items-center"><div class="text-right pr-2"><span class="font-serif text-2xl text-dark-brown font-normal">19:00</span></div><div class="flex justify-center z-10"><svg class="w-3.5 h-3.5 text-[#C5A376] fill-current" viewBox="0 0 24 24"><polygon points="12,2 15,9 22,12 15,15 12,22 9,15 2,12 9,9"></polygon></svg></div><div class="text-left pl-2"><h4 class="font-serif text-base text-dark-brown leading-snug font-normal">Dinner</h4></div></div><div class="relative grid grid-cols-[1fr_40px_1fr] items-center"><div class="text-right pr-2"><span class="font-serif text-2xl text-dark-brown font-normal">20:00</span></div><div class="flex justify-center z-10"><svg class="w-3 h-3 text-[#C5A376] fill-current" viewBox="0 0 24 24"><polygon points="12,2 15,9 22,12 15,15 12,22 9,15 2,12 9,9"></polygon></svg></div><div class="text-left pl-2"><h4 class="font-serif text-base text-dark-brown leading-snug font-normal">Party &amp; Toast</h4></div></div></div></div></div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- SECTION 4: GOOGLE MAPS (Without background) & DRESS CODE       -->
+<!-- ============================================================ -->
+<section class="relative flex flex-col gap-6" id="location-dress">
+<!-- Google Maps (No background card / transparent styling) -->
+<div class="w-full text-center">
+<span class="text-xs font-semibold tracking-widest uppercase text-rose-accent block mb-2">Google Maps</span>
+<div class="flex items-center justify-center gap-2 mb-3">
+<div class="w-7 h-7 rounded-full bg-blush/40 flex items-center justify-center text-rose-accent">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="font-serif text-lg font-bold text-dark-brown">The Rosewood Conservatory</h4>
+</div>
+<!-- Transparent styled map mockup -->
+<div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-butter/70 shadow-sm mb-3">
+<iframe allowfullscreen="" class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.639201944589!2d-122.25737562363065!3d37.42199723232014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fa5a73e6d8955%3A0xc3458ef8a8f4c20!2sFiloli%20Historic%20House%20%26%20Garden!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus" title="Venue Location Map">
+</iframe>
+</div>
+
+</div>
+<!-- Dress Code Guide (Centered unisex icon) -->
+<div class="p-2 text-center"><div class="flex items-center justify-center gap-1.5 mb-3"><svg class="w-3.5 h-3.5 text-rose-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span class="text-xs font-semibold tracking-widest uppercase text-dark-brown">Dress Code</span></div><div class="flex items-center justify-center -space-x-3 py-1"><div class="w-12 h-12 rounded-full border-2 border-white/90 shadow-sm relative z-10" style="background-color: #F8F2D8;"></div><div class="w-12 h-12 rounded-full border-2 border-white/90 shadow-sm relative z-20" style="background-color: #F3D2A2;"></div><div class="w-12 h-12 rounded-full border-2 border-white/90 shadow-sm relative z-30" style="background-color: #EDB9B8;"></div><div class="w-12 h-12 rounded-full border-2 border-white/90 shadow-sm relative z-40" style="background-color: #A8CBF0;"></div><div class="w-12 h-12 rounded-full border-2 border-white/90 shadow-sm relative z-50" style="background-color: #6EB2F7;"></div></div></div>
+</section>
+<!-- ============================================================ -->
+<!-- SECTION 5: SEE YOU THERE (Clean, without "With love, Elena" & bottom text) -->
+<!-- ============================================================ -->
+<footer class="text-center pt-2 pb-4" id="footer">
+<!-- Floating Heart without circle border -->
+<div class="mb-2 text-rose-accent flex justify-center">
+<svg class="w-5 h-5 fill-current opacity-85" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+</div>
+<h3 class="font-cormorant italic text-3xl font-normal text-dark-brown mb-2 tracking-wide">
+          See You There
+        </h3>
+<a class="inline-block px-4 py-1.5 rounded-full bg-white/90 border border-butter shadow-sm text-[11px] font-medium text-warm-muted hover:text-dark-brown transition-colors uppercase tracking-wider" href="https://whatsapp.com" rel="noopener noreferrer" target="_blank">
+          RSVP via WhatsApp
+        </a>
+</footer>
+</div>
+</main>
+<!-- Interactive Lightbox Modal -->
+<div class="fixed inset-0 z-50 bg-dark-brown/80 backdrop-blur-sm hidden flex items-center justify-center p-4" id="lightbox-modal">
+<div class="relative max-w-sm w-full bg-white rounded-3xl p-3 shadow-2xl border-2 border-butter">
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/90 text-dark-brown flex items-center justify-center shadow-md hover:bg-rose-accent hover:text-white transition-colors z-10" id="lightbox-close">
+        ✕
+      </button>
+<div class="aspect-[3/4] w-full rounded-2xl overflow-hidden bg-ivory mb-2.5">
+<img alt="Elena portrait" class="w-full h-full object-cover" id="lightbox-img" src="">
+</div>
+<div class="text-center px-2 py-1">
+<h4 class="font-serif text-base font-semibold text-dark-brown" id="lightbox-title"></h4>
+<p class="text-xs text-warm-muted font-light italic font-cormorant" id="lightbox-desc"></p>
+</div>
+</div>
+</div>
+<!-- Countdown, Lightbox & Program Scroll Observer Scripts -->
+<script>
+    // 1. Countdown Logic
+    const targetDate = new Date("2026-11-14T17:30:00").getTime();
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days-val").innerText = String(days).padStart(2, '0');
+        document.getElementById("hours-val").innerText = String(hours).padStart(2, '0');
+        document.getElementById("mins-val").innerText = String(minutes).padStart(2, '0');
+        document.getElementById("secs-val").innerText = String(seconds).padStart(2, '0');
+      } else {
+        document.getElementById("countdown-status").innerText = "It's Time to Celebrate! 🎉";
+      }
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // 2. Lightbox Logic
+    const galleryItems = document.querySelectorAll('[data-lightbox-src]');
+    const modal = document.getElementById('lightbox-modal');
+    const modalImg = document.getElementById('lightbox-img');
+    const modalTitle = document.getElementById('lightbox-title');
+    const modalDesc = document.getElementById('lightbox-desc');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const src = item.getAttribute('data-lightbox-src');
+        const title = item.getAttribute('data-lightbox-title');
+        const desc = item.getAttribute('data-lightbox-desc');
+        modalImg.src = src;
+        modalTitle.innerText = title;
+        modalDesc.innerText = desc;
+        modal.classList.remove('hidden');
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+
+    // 3. Scroll-Driven IntersectionObserver for Centered Program Timeline
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    // Fallback: activate the first item initially if viewport starts top
+    if (timelineItems.length > 0) {
+      timelineItems[0].classList.add('active');
+    }
+
+    const observerOptions = {
+      root: null,
+      // Target around the vertical middle band of the mobile screen
+      rootMargin: '-30% 0px -30% 0px',
+      threshold: [0.1, 0.4, 0.7]
+    };
+
+    const timelineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active');
+        }
+      });
+    }, observerOptions);
+
+    timelineItems.forEach(item => {
+      timelineObserver.observe(item);
+    });
+  </script>
+
+
+</body></html>
